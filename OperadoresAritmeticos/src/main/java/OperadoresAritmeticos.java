@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -51,7 +54,7 @@ public class OperadoresAritmeticos {
         System.out.println("a variável valor 2 vale: "+valor4);
         System.out.println("a variável numero 2 vale: "+numero4);
 */
-        
+        /*
         // Arredondamentos
         float v=8.1f;
         int ar=(int) Math.round(v);
@@ -60,6 +63,19 @@ public class OperadoresAritmeticos {
         System.out.println(" 8,1 arredondado (ceil): "+ac);
         int af=(int) Math.floor(v);
         System.out.println(" 8,1 arredondado (floor): "+af);
+        */
+        
+        //randon
+        
+        double rdn = Math.random();
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o valor minimo: ");
+        int min =Integer.parseInt(entrada.nextLine());
+        System.out.println("Digite o valor máximo: ");
+        int max =Integer.parseInt(entrada.nextLine());
+        
+        int n= (int) (min+rdn*(max-min));
+        System.out.printf("%d é um valor aleatório entre %d e %d ",n,min,max);
         
         
     }
