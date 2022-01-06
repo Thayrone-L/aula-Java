@@ -29,15 +29,25 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         lblAkinator = new javax.swing.JLabel();
-        lblBalao = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         lblResporta = new javax.swing.JLabel();
+        lblBalao = new javax.swing.JLabel();
         btnAdivinha = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAkinator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/akinator.png"))); // NOI18N
+        getContentPane().add(lblAkinator, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 157, 235, 410));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("Adivinhe o Numero que estou pensando!");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 37, -1, -1));
+
+        lblResporta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblResporta.setText("Sua resposta");
+        getContentPane().add(lblResporta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         lblBalao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblBalao.setForeground(new java.awt.Color(0, 0, 0));
@@ -45,71 +55,19 @@ public class Principal extends javax.swing.JFrame {
         lblBalao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/balao.png"))); // NOI18N
         lblBalao.setText("<html>Estou pensando em um <p> numero aleatório entre <strong>1</strong> e <strong>10</strong></p></html");
         lblBalao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lblBalao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Adivinhe o Numero que estou pensando!");
-
-        lblResporta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblResporta.setText("Sua resposta");
-
+        btnAdivinha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnAdivinha.setText("Adivinhar");
         btnAdivinha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdivinhaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnAdivinha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap(179, Short.MAX_VALUE)
-                                .addComponent(lblBalao))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(lblResporta)
-                                .addGap(18, 18, 18)
-                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(btnAdivinha)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(lblAkinator, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(156, 156, 156)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 83, Short.MAX_VALUE)
-                        .addComponent(lblAkinator, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblBalao)
-                        .addGap(128, 128, 128)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblResporta)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAdivinha)
-                        .addContainerGap())))
-        );
+        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
