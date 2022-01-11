@@ -18,7 +18,7 @@ public class AulaFor {
         int n=0;
         for(int cc=1; cc<=3; cc++){
         
-            n+= Integer.parseInt(JOptionPane.showInputDialog(null,"Informe a" + cc +"º nota"));
+            n+= Integer.parseInt(JOptionPane.showInputDialog(null,"Informe a " + cc +"º nota"));
         
         }
         float media = n/3;
